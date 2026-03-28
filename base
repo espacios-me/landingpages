@@ -136,6 +136,35 @@
         <link rel="stylesheet" href="/homepage/_next/static/css/542dfae3639023ec.css"/>
         <link rel="preload" href="/homepage/_next/static/css/36cceb154bd8aae7.css" as="style"/>
         <link rel="stylesheet" href="/homepage/_next/static/css/36cceb154bd8aae7.css"/>
+        <style id="monochrome-theme-override">
+            :root {
+                color-scheme: light;
+            }
+
+            html,
+            body {
+                background: #fff !important;
+                color: #000 !important;
+            }
+
+            body {
+                filter: grayscale(100%) contrast(112%);
+            }
+
+            a,
+            button,
+            [role='button'] {
+                color: #000 !important;
+                border-color: #000 !important;
+            }
+
+            img,
+            video,
+            picture,
+            svg {
+                filter: grayscale(100%) contrast(108%);
+            }
+        </style>
         <noscript data-n-css=""></noscript>
         <script defer="" nomodule="" src="/homepage/_next/static/chunks/polyfills-42372ed130431b0a.js"></script>
         <script defer="" src="/homepage/_next/static/chunks/4371.1747b3a14863d6db.js"></script>
