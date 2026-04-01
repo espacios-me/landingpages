@@ -423,10 +423,11 @@ export default function App() {
                     {projects.map((item) => {
                       const active = item.id === project.id;
                       return (
-                        <div
+                        <button
                           key={item.id}
+                          type="button"
                           onClick={() => setActiveId(item.id)}
-                          className={`break-inside-avoid cursor-pointer rounded-2xl overflow-hidden border transition ${
+                          className={`block w-full break-inside-avoid rounded-2xl overflow-hidden border text-left transition ${
                             active
                               ? 'border-white/30 bg-white/10'
                               : 'border-white/10 bg-white/5 hover:bg-white/10'
@@ -445,7 +446,7 @@ export default function App() {
                               {item.location}
                             </p>
                           </div>
-                        </div>
+                        </button>
                       );
                     })}
                   </div>
@@ -456,6 +457,7 @@ export default function App() {
                       src={`https://www.google.com/maps?q=${encodeURIComponent(project.location)}&output=embed`}
                       className="w-full h-[300px] border-0"
                       loading="lazy"
+                      referrerPolicy="no-referrer-when-downgrade"
                     />
                   </div>
                 </div>
